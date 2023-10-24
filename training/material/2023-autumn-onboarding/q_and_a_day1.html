@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Questions and answers from HPC on-boarding Oct 2023, Day 1 (Oct 4) &mdash; Sigma2 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/nris.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/nris.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://siteimproveanalytics.com/js/siteanalyze_6036825.js"></script>
+        <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Sigma2/NRIS documentation
+              <img src="../../../_static/NRIS Logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Policies</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../code-of-conduct.html">Code of Conduct</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting help</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/support_line.html">Getting help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/extended_support.html">Extended support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/how_to_write_good_support_requests.html">Writing good support requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/user_communities.html">User communities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/qa-sessions.html">Open Question &amp; Answer Sessions for All Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/lost_forgotten_password.html">Lost, expiring or changing passwords</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/project_leader_support.html">Project leader support</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Training</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../events.html">Training events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes_qa.html">Questions, Answers and Feedbacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../videos.html">Training Video Archives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../material.html">Training materials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/opslog.html">Using the status system (opslog)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/applying_account.html">How do I get an account?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/applying_resources.html">Applying for computing and storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/editing_files.html">Editing files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_development/guides/vs_code/connect_to_server.html">Connecting to a system with Visual Studio Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/ssh.html">SSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/remote-desktop.html">Remote Desktop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/R.html">First R calculation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Services</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nird_archive/user-guide.html">Research Data Archive (NIRD RDA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nird_toolkit/overview.html">NIRD Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../services/easydmp-user-documentation.html">EasyDMP User Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/course_resources.html">CRaaS - Course Resources as a Service</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">HPC usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../hpc_machines/migration2metacenter.html">Migration to an NRIS HPC machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../computing/responsible-use.html">Using shared resources responsibly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../jobs/overview.html">Running jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../computing/tuning-applications.html">Tuning applications</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code development and tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_development/overview.html">Code development and tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../software/modulescheme.html">Software module scheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../software/installed_software.html">Installed software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../software/userinstallsw.html">Installing software as user</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../software/appguides.html">Application guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../software/licenses.html">Licence and access policies</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Files, storage and backup</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../files_storage/nird_lmd.html">NIRD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files_storage/clusters.html">Storage areas on HPC clusters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files_storage/quota.html">Storage quota</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files_storage/backup.html">Backup on Betzy, Fram, Saga, and NIRD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files_storage/file_transfer.html">File transfer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files_storage/sharing_files.html">Data handling and storage policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files_storage/performance.html">Optimizing storage performance</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Sigma2/NRIS documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Questions and answers from HPC on-boarding Oct 2023, Day 1 (Oct 4)</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/UNINETTSigma2/documentation/blob/main/training/material/2023-autumn-onboarding/q_and_a_day1.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="questions-and-answers-from-hpc-on-boarding-oct-2023-day-1-oct-4">
+<span id="training-2023-autumn-onboarding-notes-day1"></span><h1><a class="toc-backref" href="#id1" role="doc-backlink">Questions and answers from HPC on-boarding Oct 2023, Day 1 (Oct 4)</a><a class="headerlink" href="#questions-and-answers-from-hpc-on-boarding-oct-2023-day-1-oct-4" title="Link to this heading"></a></h1>
+<nav class="contents" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#questions-and-answers-from-hpc-on-boarding-oct-2023-day-1-oct-4" id="id1">Questions and answers from HPC on-boarding Oct 2023, Day 1 (Oct 4)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#icebreaker" id="id2">Icebreaker</a></p></li>
+<li><p><a class="reference internal" href="#why-use-a-cluster" id="id3">Why use a Cluster?</a></p>
+<ul>
+<li><p><a class="reference internal" href="#poll-located-ssh-type-ssh-v-and-i-see-a-version-printed-not-an-error" id="id4">Poll: Located ssh (type <code class="docutils literal notranslate"> <span class="pre">ssh</span> <span class="pre">-V</span></code>, and I see a version printed, not an error)</a></p></li>
+<li><p><a class="reference internal" href="#poll-login-into-saga-type-ssh-username-saga-sigma2-no" id="id5">Poll: Login into Saga (type <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">username&#64;saga.sigma2.no</span></code>)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#exercise-scheduling-jobs" id="id6">Exercise: Scheduling Jobs</a></p>
+<ul>
+<li><p><a class="reference internal" href="#status" id="id7">Status</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#transferring-files" id="id8">Transferring files</a></p></li>
+<li><p><a class="reference internal" href="#feedback-of-the-day" id="id9">Feedback of the day</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="icebreaker">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Icebreaker</a><a class="headerlink" href="#icebreaker" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Have you experienced any computational analysis/tasks that was too big or too long for laptop or the desktop? elaborate</p>
+<ul>
+<li><p>Once I had to perfome an analysis that took 60 hours straight to complete. I could not keep the laptop on continuously for that long.</p></li>
+<li><p>my climate simulations need more resources than my laptop have</p></li>
+<li><p>Numerical ocean modelling: restricted to very small simulations on a laptop</p></li>
+<li><p>Whole genome sequencing and functional annotaion. too big for online tools</p></li>
+<li><p>I need a cloud solution to run scripts for browser-based apps, which can also include online learning.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="why-use-a-cluster">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Why use a Cluster?</a><a class="headerlink" href="#why-use-a-cluster" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>https://training.pages.sigma2.no/tutorials/hpc-intro/episodes/11-hpc-intro.html</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Will the exercise and the coursepage still be there after the course is done?</p>
+<ul class="simple">
+<li><p>Yes, they will stay.</p></li>
+</ul>
+</li>
+<li><p>is data transferred to server like sigma or stay on local computer ? if yes, it means need some time to transfer data to server ?</p>
+<ul class="simple">
+<li><p>when you transfer the data, you are copying to the cluster, so it will stay on your local computer until you delete it on your local system. The time to finish the transfer depend on many factors, like size of the data, filesystem etc. We will discuss this later today</p></li>
+</ul>
+</li>
+</ol>
+<section id="poll-located-ssh-type-ssh-v-and-i-see-a-version-printed-not-an-error">
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">Poll: Located ssh (type <code class="docutils literal notranslate"> <span class="pre">ssh</span> <span class="pre">-V</span></code>, and I see a version printed, not an error)</a><a class="headerlink" href="#poll-located-ssh-type-ssh-v-and-i-see-a-version-printed-not-an-error" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Yes ooo0oooooooooooooooo</p></li>
+<li><p>No:o</p></li>
+<li></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>I have version 3.0.1 from 2021. should i update ssh?</p>
+<ul class="simple">
+<li><p>No, you don’t need to update.</p></li>
+</ul>
+</li>
+<li><p>I got permission denied after writing my password, what should I do?</p>
+<ul class="simple">
+<li><p>Do you have an account? can you contact the host(dhanya) on zoom with your username</p></li>
+<li><p>Dhanya is checking</p></li>
+<li><p>Resolved</p></li>
+</ul>
+</li>
+<li><p>Is key authentication disabled on Saga?</p>
+<ul class="simple">
+<li><p>it is not disabled (I use it)</p></li>
+<li><p>I tried adding my public key to <code class="docutils literal notranslate"><span class="pre">~/ssh/authorized_keys</span></code>, but it did not work</p>
+<ul>
+<li><p>it is in <code class="docutils literal notranslate"><span class="pre">~/.ssh/authorized_keys</span></code> and make sure that file is only readable and writable by you. you can make sure it has the right permissions with: <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">chmod</span> <span class="pre">600</span> <span class="pre">~/.ssh/authorized_keys</span></code> - does it work now?</p></li>
+</ul>
+</li>
+<li><p>Now it works :-)</p>
+<ul>
+<li><p>great!</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Is it possible to manually choose login nodes, sometimes I run ‘nohup’ command in one login node but when I want to kill it I cannot kill it in other nodes</p>
+<ul class="simple">
+<li><p>Yes; you may log in using the direct address of the server; Saga has 5 login nodes, named login-1.saga.sigma2.no and so fort until login-5… For login 2 the address would be yourusername&#64;login-2.saga.sigma2.no. But as Sabry said, you are not guaranteed that the login server have capacity to do your job if it is heavy loaded. The distribution on login nodes follows a round-robin principle to distribute load as evenly as possible (in theory).</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="poll-login-into-saga-type-ssh-username-saga-sigma2-no">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">Poll: Login into Saga (type <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">username&#64;saga.sigma2.no</span></code>)</a><a class="headerlink" href="#poll-login-into-saga-type-ssh-username-saga-sigma2-no" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>I managed to login oooooooooooooooooooo</p></li>
+<li><p>I didn’t manage:</p></li>
+</ul>
+<ol class="arabic simple" start="7">
+<li><p>How can you make the file hidden?</p>
+<ul class="simple">
+<li><p>files and directories that start with a dot are “hidden” when you type <code class="docutils literal notranslate"><span class="pre">ls</span></code>. Example for hidden files would be: <code class="docutils literal notranslate"><span class="pre">.somefile</span></code> or <code class="docutils literal notranslate"><span class="pre">.anotherdirectory</span></code>. You can list them with <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-a</span></code></p></li>
+<li><p>what command make a file hidden</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">mv</span> <span class="pre">somefile</span> <span class="pre">.somefile</span></code> will rename the file and by adding the dot in front we made it “hidden” (but it is not really hidden, only not shown in a <code class="docutils literal notranslate"><span class="pre">ls</span></code> command)</p>
+<ul>
+<li><p>thanks</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>historical anecdote: the fact that files and folders starting with dot became “hidden” happened by mistake in the early days of UNIX. but the creators of UNIX figured that it was useful so they did not fix the mistake and kept this as useful feature to be able to hide some files from a default <code class="docutils literal notranslate"><span class="pre">ls</span></code>.</p></li>
+</ul>
+</li>
+<li><p>is saga already installed all software or user need to install like some python library etc?</p>
+<ul class="simple">
+<li><p>most of them are installed. We will talk about it tomorrow.</p></li>
+</ul>
+</li>
+<li><p>if the jobs takes more than 7 days for computing, what will happen in such case?</p>
+<ul class="simple">
+<li><p>you won’t be able to submit a job for longer than 7 days. and when reaching the maximum time, the scheduler will stop the job.</p></li>
+<li><p>in practice this means that we need to organize our calculations into portions that fit into the time. it might require code optimization or to chop the problem into smaller problem sizes. the reason why we don’t allow extremely long calculations: 1) it would make scheduling harder for other users and 2) it would make it more difficult for staff to apply upgrades on the cluster.</p></li>
+</ul>
+</li>
+<li><p>Is machine learning model data need to upload on sage server ?</p>
+<ul class="simple">
+<li><p>if you wish to simulate the model with the data on the cluster, yes. But in this course we will not go in detail about machine learning model</p></li>
+</ul>
+</li>
+<li><p>I wrote info and now i cant get out of infopage, please help</p>
+<ul class="simple">
+<li><p>type: “q”</p>
+<ul>
+<li><p>I ended up restarting my terminal, but this is probably a better way</p>
+<ul>
+<li><p>yes :-) many of these tools can be exited by typing q. but sometimes I don’t know either and have to stop the terminal. Typical trick is ctrl-c or ctrl-d.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>What kind of GPU are availables? and how I can check it ? can we choose specific GPU?</p>
+<ul class="simple">
+<li><p>Saga has Nvidia P100 GPUs and Betzy has A100 GPU. LUMI-G has AMD MI250X GPUs. You could run the command <code class="docutils literal notranslate"><span class="pre">nvidia-smi</span></code> for NVIDIA GPUs and <code class="docutils literal notranslate"><span class="pre">rocm-smi</span></code> for AMD GPUs. More details are provided here https://documentation.sigma2.no/code_development/guides/gpu_usage.html#gpuusage</p></li>
+</ul>
+</li>
+<li><p>I tried downloading a python package with pip, but it didn’t work. Are there limitations on what packages you can install?</p>
+<ul class="simple">
+<li><p>no there are no limitations on what python package to install. but the preferred way is to either install into a virtual environment or a conda environment. maybe you accidentally tried to do a system-wide install and that has to fail otherwise users could change the system for other users.</p>
+<ul>
+<li><p>Ah ok! How can i know if i did a system-wide install? I naively wrote ‘pip install pytorch’ right after a log-in to the saga cluster.</p>
+<ul>
+<li><p>it probably complained about write permissions. But a simple <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">something</span></code> without being in a virtual environment or a conda environment will fail on the cluster because it will try to install it system-wide.</p></li>
+<li><p>hints on how to do it instead: https://documentation.sigma2.no/software/userinstallsw.html</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Can you point us to functions that work like sinfo and nproc etc on mac?</p>
+<ul class="simple">
+<li><p>(I hope somebody on macOS can answer; I am Linux user and I simply don’t know)</p></li>
+<li><p>I don’t know the command, but you can find it with some clicks on mac,</p></li>
+<li><p>Click “About this mac” &gt; “System Report” &gt; “Hardware” The number of CPU Cores should be listed in the Hardware overview, to the right of “Total number of Cores”</p></li>
+<li><p>nproc -&gt; MAC command is <code class="docutils literal notranslate"><span class="pre">sysctl</span> <span class="pre">-n</span> <span class="pre">hw.logicalcpu</span></code> (This returns logical CPUs) To obtain physical CPUs you may run <code class="docutils literal notranslate"><span class="pre">sysctl</span> <span class="pre">-n</span> <span class="pre">hw.physicalcpu</span></code></p></li>
+</ul>
+</li>
+<li><p>accel        up 14-00:00:0      1  down* c7-4? is it mean the server is down?</p>
+<ul class="simple">
+<li><p>it means, the node c7-4 is down, not the server</p></li>
+</ul>
+</li>
+<li><p>Is it only accel partition that has GPUs? What are other partitions  suited for?</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">accel</span></code>  partition is for jobs that needs GPUs. More info on partition <a class="reference external" href="https://documentation.sigma2.no/jobs/choosing_job_types.html#job-types">here</a></p></li>
+<li><p>Thanks :3</p></li>
+</ul>
+</li>
+<li><p>Will we learn how to use conda with hpc?</p>
+<ul class="simple">
+<li><p>not in this course but we have good material here:</p>
+<ul>
+<li><p>https://documentation.sigma2.no/software/userinstallsw/conda.html</p></li>
+<li><p>https://documentation.sigma2.no/software/userinstallsw.html</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>shh to specific node does not allow, it shows following message. Do we need to have active job on node to login?</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">c7</span><span class="o">-</span><span class="mi">3</span>
+<span class="n">Access</span> <span class="n">denied</span> <span class="n">by</span> <span class="n">pam_slurm_adopt</span><span class="p">:</span> <span class="n">you</span> <span class="n">have</span> <span class="n">no</span> <span class="n">active</span> <span class="n">jobs</span> <span class="n">on</span> <span class="n">this</span> <span class="n">node</span>
+<span class="n">Connection</span> <span class="n">closed</span> <span class="n">by</span> <span class="mf">10.31.7.3</span> <span class="n">port</span> <span class="mi">22</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> - you can only log-in to compute nodes where you have a running job
+</pre></div>
+</div>
+<ol class="arabic" start="19">
+<li><p>I dont have access to the right project</p>
+<ul class="simple">
+<li><p>Can you tell me(dhanya) your username on zoom ?</p></li>
+<li><p>Checking</p></li>
+<li><p>Resolved</p></li>
+</ul>
+</li>
+<li><p>I am wondering if you could show us how to submit a python based code/program to run on a compute node?</p>
+<ul class="simple">
+<li><p>now demonstrated but please ask more if you would like to know about something more specifically</p></li>
+<li><p>You could run an interactive job, which makes a compute node available for your job. This can be done on Saga running this: <code class="docutils literal notranslate"><span class="pre">salloc</span> <span class="pre">-A</span> <span class="pre">nnxxxxx</span> <span class="pre">-t</span> <span class="pre">00:05:00</span> <span class="pre">--qos=devel</span> <span class="pre">--nodes</span> <span class="pre">1</span> <span class="pre">--ntasks</span> <span class="pre">1</span> <span class="pre">--mem</span> <span class="pre">512M</span></code>. This will make one compute node available for 5 min. and then you can run your python script (python script.py)</p></li>
+</ul>
+</li>
+<li><p>python code need to  write into nano file ? can we just call our python script directly without use nano etc.</p>
+<ul class="simple">
+<li><p>you have at least two options:</p>
+<ul>
+<li><p>a run script or job script which on top specifies what it needs from SLURM with<code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code> directives and then calls python (this is what is demonstrated)</p></li>
+<li><p>you can also <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> a python script directly and add the <code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code> directives on top of the python script. In other words the job script or run script does not have to be a bash shell script. it can be written in any language that uses <code class="docutils literal notranslate"><span class="pre">#</span></code> as comment symbol</p></li>
+</ul>
+</li>
+<li><p>did this clarify your question?</p></li>
+<li><p>You can call python scripts. The reason Sabry used nano was that he did not have any script ready, so he created python script with only a print command. Nano is just a editor to create the file. You could crete or download files instead using other methids.</p></li>
+</ul>
+</li>
+<li><p>how can we use –partition option? and its purpose</p>
+<ul class="simple">
+<li><p>example for how and use case (in this case running a job on the partition dedicated for calculations that require lots of memory): https://documentation.sigma2.no/jobs/job_scripts/saga_job_scripts.html#bigmem</p></li>
+<li><p>And here is a description of different partitions https://documentation.sigma2.no/jobs/choosing_job_types.html</p></li>
+<li><p>Thank you</p></li>
+</ul>
+</li>
+<li><p>Does the order of the #SBATCH inputs within the script matter?</p>
+<ul class="simple">
+<li><p>No it does not matter.</p></li>
+<li><p>what matters is that all <code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code> directives come before the first shell command. It will not understand the script if sbatch commands come after shell commands.</p>
+<ul>
+<li><p>Understood. Thanks!</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>How do I know the memory per node?</p>
+<ul class="simple">
+<li><p>here is an overview: https://documentation.sigma2.no/hpc_machines/saga.html</p></li>
+<li><p>If you want to use sinfo, following are two example to find out howmuch memory(in megabytes) is there on the node c1-1</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sabryr@SAGA 04-10-2023]$ sinfo -o &quot;%m&quot; -n c1-1
+MEMORY
+182784
+
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sabryr@SAGA 04-10-2023]$ freepe | grep -w c1-1
+c1-1    8 of 40 cores free,  24432 of 182784 MB free,  5.3 PEs free (MIXED)
+
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>You could also run <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">/proc/meminfo</span></code> to get the total physical memory of a system and Additional info.</p>
+<ul>
+<li><p>Thanks!</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>I have made a nano file called test.sh I want to run, but only get this output: <code class="docutils literal notranslate"><span class="pre">sbatch</span>&#160; <span class="pre">--account=&lt;nn9970k&gt;</span> <span class="pre">--mem=1G</span> <span class="pre">--time=01:00</span> <span class="pre">test.sh</span></code></p>
+<ul class="simple">
+<li><p>bash: nn9970k: No such file or directory</p></li>
+<li><p>Remove the angle brakets in account name, you have <code class="docutils literal notranslate"><span class="pre">--account=&lt;nn9970k&gt;</span></code>, what you should use is <code class="docutils literal notranslate"><span class="pre">--account=nn9970k</span> </code></p></li>
+</ul>
+</li>
+<li><p>While running sbatch I got this error message ‘This does not look like a btach script,. The forst line must start with #! followed by the path to an interperter’. I didn’t quite understand the message.</p>
+<ul class="simple">
+<li><p>the first line of your bash script should be <code class="docutils literal notranslate"><span class="pre">#!/bin/bash</span></code> or <code class="docutils literal notranslate"><span class="pre">#!/usr/bin/env</span> <span class="pre">bash</span></code></p></li>
+<li><p>this line tells the shell how to interpret the script. in this case it tells the shell that it should interpret the script using the bash language. I guess in your case the first line looked differently.</p></li>
+<li><p>the more big picture answer is that in linux a file is not interpreted based on a file ending or suffix. we need to tell the system how it should read and understand a script. sometimes inside a script is python code and then I would put <code class="docutils literal notranslate"><span class="pre">#!/usr/bin/env</span> <span class="pre">python</span></code> on top of that script</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<section id="exercise-scheduling-jobs">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Exercise: Scheduling Jobs</a><a class="headerlink" href="#exercise-scheduling-jobs" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>https://training.pages.sigma2.no/tutorials/hpc-intro/episodes/13-scheduler.html#exercise</p></li>
+</ul>
+<section id="status">
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Status</a><a class="headerlink" href="#status" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>I am done : ooo00oooooo</p></li>
+<li><p>I need more time:</p></li>
+<li><p>I am confused:</p></li>
+</ul>
+</section>
+</section>
+<section id="transferring-files">
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Transferring files</a><a class="headerlink" href="#transferring-files" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>https://training.pages.sigma2.no/tutorials/hpc-intro/episodes/15-transferring-files.html</p></li>
+</ul>
+<ol class="arabic simple" start="27">
+<li><p>During transferring files, do we need to speciy login host or it is optional?</p>
+<ul class="simple">
+<li><p>it is optional. unless the transfer takes many hours or even days. then it might be better to specify it to make sure that some automatic DNS (domain name server) “rotation” does not break the connection after few hours and interrupts your transfer. for most transfers I don’t specify the actual login node.</p></li>
+</ul>
+</li>
+<li><p>Please explain how to set path .</p>
+<ul class="simple">
+<li><p>do you here refer to the “Replace /path/to/local/file” in the instructions?</p>
+<ul>
+<li><p>yes</p>
+<ul>
+<li><p>in this case, on saga, type <code class="docutils literal notranslate"><span class="pre">pwd</span></code> - it will “print working directory” and tell you the path that you are on. it will look like <code class="docutils literal notranslate"><span class="pre">/cluster/home/SOMEBODY</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Why is rsync recommended over scp?</p>
+<ul class="simple">
+<li><p>it is faster and safer. faster because it only copies file changes and does not copy files which haven’t changed. safer because you can ask it to not overwrite existing files on the target machine.</p></li>
+<li><p>great, thanks!</p>
+<ul>
+<li><p>it was also surprising for me to find out that when transferring very many very tiny files, rsync was orders of magnitude faster. when trasferring few files it does not matter which of the two.</p></li>
+<li><p>Thanks for clarification. useful info</p></li>
+</ul>
+</li>
+<li><p>another benefit: if a connection is interrupted, rsync is designed to be able to pick up where it left off.</p></li>
+</ul>
+</li>
+<li><p>Why is rsync recommended over programs like filezilla?</p>
+<ul class="simple">
+<li><p>see the answer to the question above, it is recommended, however users can choose there preferred tool</p></li>
+<li><p>Only transferring what has changed makes rsync deploys an order of magnitude faster, being said that I don’t have experience with filezilla :) (DP)</p></li>
+</ul>
+</li>
+<li><p>What are the flags?</p>
+<ul class="simple">
+<li><p>are way to say options and pass arguments to the commands you are in. you can find the flags associated in man pages/help  <code class="docutils literal notranslate"><span class="pre">rsync</span> <span class="pre">--help</span></code></p></li>
+</ul>
+</li>
+<li><p>rsync is not recognized as an internal or external command in my command prompt?</p>
+<ul class="simple">
+<li><p>you can try it rsync on saga</p></li>
+<li><p>yes, but if i want to transfer from my local computer? do i need two terminals to do this?</p></li>
+<li><p>which operating system are you in?</p></li>
+<li><p>windows: Which version?</p></li>
+<li><p>Windows 10</p>
+<ul>
+<li><p>Please look here: https://www.ubackup.com/windows-10/rsync-windows-10-1021.html</p></li>
+</ul>
+</li>
+<li><p>Please see the doc: https://training.pages.sigma2.no/tutorials/hpc-intro/episodes/15-transferring-files.html#working-with-files-generated-in-different-environments</p></li>
+<li><p>This is a bit easier with visual studio code. Please consider this solution.</p></li>
+</ul>
+</li>
+<li><p>[user&#64;laptop ~]$ rsync -avz /path/to/local/file username&#64;login-1.fram.sigma2.no:/path/to/remote/directory   Please explain it path means whole folder path or what? local name o0</p>
+<ul class="simple">
+<li><p>Above <code class="docutils literal notranslate"><span class="pre">/path/to/local/</span></code> means the path in your laptop where you have the file that need to transfer , and <code class="docutils literal notranslate"><span class="pre">/path/to/remote/directory</span></code> it is the path in your remote cluster, here on <code class="docutils literal notranslate"><span class="pre">saga</span></code></p></li>
+</ul>
+</li>
+<li><p>For me it would be handy to have a RStudio equivalent in Saga. It is suggested that VSCode could be a good option. I read somewhere that I would need some software for this to work in a best possible way (vscode-R, vscode-r-lsp, languageserver, radian). Does anybody have experience with this or any suggestions?</p>
+<ul class="simple">
+<li><p>Please read more about this exact question here: https://documentation.sigma2.no/code_development/guides/vs_code/connect_to_server.html</p></li>
+<li><p>We do have rstudio in Saga, but not in the way you expect it. However, if you want to use the remote solution for RStudio - please check this page; https://documentation.sigma2.no/nird_toolkit/overview.html and consider this course: https://documentation.sigma2.no/training/events/2023-10-nird-toolkit.html</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="feedback-of-the-day">
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Feedback of the day</a><a class="headerlink" href="#feedback-of-the-day" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>What was good today</p>
+<ul>
+<li><p>organized and very easy to ask questions. Also very fast feedback.</p></li>
+<li><p>The explanation of the scheduler with the restaurant is a great analogy that helped me to understand the concept very clearly. I have been using different HPC resources for years without knowing how exacly this SLURM works so thank you very much! Also the map of where we are when we login and where our jobs run is clear for me now. I appreciate very much this course, thanks to all the people who made this possible!</p></li>
+<li><p>thank you not only for valuable knowledge, but also for the friendly atmosphere :)</p></li>
+<li><p>Thanks to the organizers!</p></li>
+<li><p>Thank you! Great session</p></li>
+</ul>
+</li>
+<li><p>What are the things to improve</p>
+<ul>
+<li><p>It is important to point out several times that all we are learning in this course could be applied to other HPC, also out of Norway. It is useful information for all our research careers. Thanks!</p></li>
+<li><p>Might be out of the scope of this course but it would be very interesting to have a brief walk-through of setting up the environment for scientific programming in VSCode but in conjunction with remote development on HPC (e.g. Enabling X11 Forwarding to plot, Jupyter VSCode extension … etc.)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Sigma2/NRIS. Text shared under CC-BY 4.0 license.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+<!-- Integrate opslog banner -->
+<span class="sp-status"></span>
+<script>
+  window.statuspalWidget = {
+    subdomain: 'sigma2-nris',
+    host: 'https://statuspal.eu',
+    badge: {
+      enabled: false,
+      selector: '.sp-status', 
+    },
+    banner: {
+      enabled: true,
+      position: 'top-right',
+    }
+  }
+</script>
+<script src="https://statuspal.io/js/widget.js"></script>
+
+
+</body>
+</html>

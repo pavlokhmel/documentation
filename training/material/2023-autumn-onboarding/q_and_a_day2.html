@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Questions and answers from HPC on-boarding Oct 2023, Day 2 (Oct 5) &mdash; Sigma2 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/nris.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/nris.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://siteimproveanalytics.com/js/siteanalyze_6036825.js"></script>
+        <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Sigma2/NRIS documentation
+              <img src="../../../_static/NRIS Logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Policies</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../code-of-conduct.html">Code of Conduct</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting help</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/support_line.html">Getting help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/extended_support.html">Extended support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/how_to_write_good_support_requests.html">Writing good support requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/user_communities.html">User communities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/qa-sessions.html">Open Question &amp; Answer Sessions for All Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/lost_forgotten_password.html">Lost, expiring or changing passwords</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/project_leader_support.html">Project leader support</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Training</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../events.html">Training events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes_qa.html">Questions, Answers and Feedbacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../videos.html">Training Video Archives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../material.html">Training materials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/opslog.html">Using the status system (opslog)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/applying_account.html">How do I get an account?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/applying_resources.html">Applying for computing and storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/editing_files.html">Editing files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_development/guides/vs_code/connect_to_server.html">Connecting to a system with Visual Studio Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/ssh.html">SSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/remote-desktop.html">Remote Desktop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/R.html">First R calculation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Services</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nird_archive/user-guide.html">Research Data Archive (NIRD RDA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nird_toolkit/overview.html">NIRD Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../services/easydmp-user-documentation.html">EasyDMP User Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/course_resources.html">CRaaS - Course Resources as a Service</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">HPC usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../hpc_machines/migration2metacenter.html">Migration to an NRIS HPC machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../computing/responsible-use.html">Using shared resources responsibly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../jobs/overview.html">Running jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../computing/tuning-applications.html">Tuning applications</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code development and tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_development/overview.html">Code development and tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../software/modulescheme.html">Software module scheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../software/installed_software.html">Installed software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../software/userinstallsw.html">Installing software as user</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../software/appguides.html">Application guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../software/licenses.html">Licence and access policies</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Files, storage and backup</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../files_storage/nird_lmd.html">NIRD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files_storage/clusters.html">Storage areas on HPC clusters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files_storage/quota.html">Storage quota</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files_storage/backup.html">Backup on Betzy, Fram, Saga, and NIRD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files_storage/file_transfer.html">File transfer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files_storage/sharing_files.html">Data handling and storage policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files_storage/performance.html">Optimizing storage performance</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Sigma2/NRIS documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Questions and answers from HPC on-boarding Oct 2023, Day 2 (Oct 5)</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/UNINETTSigma2/documentation/blob/main/training/material/2023-autumn-onboarding/q_and_a_day2.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="questions-and-answers-from-hpc-on-boarding-oct-2023-day-2-oct-5">
+<span id="training-2023-autumn-onboarding-notes-day2"></span><h1><a class="toc-backref" href="#id1" role="doc-backlink">Questions and answers from HPC on-boarding Oct 2023, Day 2 (Oct 5)</a><a class="headerlink" href="#questions-and-answers-from-hpc-on-boarding-oct-2023-day-2-oct-5" title="Link to this heading"></a></h1>
+<nav class="contents" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#questions-and-answers-from-hpc-on-boarding-oct-2023-day-2-oct-5" id="id1">Questions and answers from HPC on-boarding Oct 2023, Day 2 (Oct 5)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#icebreaker" id="id2">Icebreaker</a></p></li>
+<li><p><a class="reference internal" href="#accessing-software" id="id3">Accessing software</a></p></li>
+<li><p><a class="reference internal" href="#exercise" id="id4">Exercise</a></p>
+<ul>
+<li><p><a class="reference internal" href="#status" id="id5">Status:</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#compute-and-storage-quota" id="id6">Compute and storage quota</a></p></li>
+<li><p><a class="reference internal" href="#poll-try-dusage" id="id7">Poll: Try <code class="docutils literal notranslate"><span class="pre">dusage</span></code></a></p></li>
+<li><p><a class="reference internal" href="#poll-try-cost" id="id8">Poll: Try <code class="docutils literal notranslate"><span class="pre">cost</span></code></a></p></li>
+<li><p><a class="reference internal" href="#using-shared-resources-responsibly" id="id9">Using shared resources responsibly</a></p>
+<ul>
+<li><p><a class="reference internal" href="#feedback-of-the-day" id="id10">Feedback of the day</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="icebreaker">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Icebreaker</a><a class="headerlink" href="#icebreaker" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Which software would you like to run on our HPC machines?</p>
+<ul>
+<li><p>LAMMPS</p></li>
+<li><p>anvio workpackages, phyloflash</p></li>
+<li><p>a python project</p></li>
+<li><p>a python program that interacts with a JS client</p></li>
+<li><p>trimAl</p></li>
+<li><p>GTDB-Tk</p></li>
+<li><p>R studio</p></li>
+<li><p>Obitools 4</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="accessing-software">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Accessing software</a><a class="headerlink" href="#accessing-software" title="Link to this heading"></a></h2>
+<p>https://training.pages.sigma2.no/tutorials/hpc-intro/episodes/14-modules.html</p>
+<p>(questions about previous days also welcome)</p>
+<ol class="arabic simple">
+<li><p>What if we need more than one software ? e.g Python and R</p>
+<ul class="simple">
+<li><p>in this case we can load both as a module but we need to make sure they are compatible. more about it in a moment.</p></li>
+</ul>
+</li>
+<li><p>How do I know which software are not campatible?</p>
+<ul class="simple">
+<li><p>This is very good question and something we must be very considerate. Because if the modules that are loaded together are not compatible this will cause issues</p></li>
+<li><p>The main consideration is the compiler or the tool chain used. This we can see from the prefix(last part of the module name) of the module.</p></li>
+<li><p>Another thing is when we load modules, it will load all the dependencies along side as well, e.g. sometimes we do not have to do anything extra</p></li>
+<li><p>We will show more latter in the lesson</p></li>
+</ul>
+</li>
+<li><p>Still talking about more than one software, if both need to be in a container, can I download one container for one and install the other software inside the same container or should I use two different containers?</p>
+<ul class="simple">
+<li><p>I would install both into the same container. Composing containers is not so easy but it is possible.</p></li>
+</ul>
+</li>
+<li><p>What is the difference between installing a software and loading a module?</p>
+<ul class="simple">
+<li><p>Loading a module means that the software is installed as a module on the cluster, you can load them when you need the software, this is applicable to most cases, see <a class="reference external" href="https://documentation.sigma2.no/software/modulescheme.html">here</a>. In somecases, the software that you need may not be available as a module, then you can install it as a user. More on this is <a class="reference external" href="https://documentation.sigma2.no/software/userinstallsw.html">here</a></p></li>
+</ul>
+</li>
+<li><p>Why did you remove parts of the path?  Did not understand that step and what it did/why it was done?</p>
+<ul class="simple">
+<li><p>in practice we will not do this manually but we will let the <code class="docutils literal notranslate"><span class="pre">module</span></code> commands modify path. they will in effect pre-pend and modify PATH and thus make software visible or not visible. key point here is that linux will search through PATH from left to right.</p></li>
+</ul>
+</li>
+<li><p>How do I find more info about the module command, man module is not giving anything
+- Try <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">--help</span></code>
+- also: <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">show</span> <span class="pre">SOMEMODULE</span></code></p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">StdEnv</span></code> is a set of settings that are needed for the module system to work. Loading this will help the system what to do where to find the software when you ask quesitons like <code class="docutils literal notranslate"><span class="pre">module</span>&#160; <span class="pre">avail</span></code> from the system.</p></li>
+<li><p>Do you normally make environments in saga to use software, like miniconda?</p>
+<ul class="simple">
+<li><p>in this case I would module load the miniconda module and then use miniconda to manage dependencies</p></li>
+</ul>
+</li>
+<li><p>Can we use different toolchain for a job?</p>
+<ul class="simple">
+<li><p>As far as I understand the module system (or EasyBuild which we use underneath) assumes that we have a consistent toolchain in our environment</p></li>
+<li><p>To avoid conflict I would suggest to go for same toolchain</p></li>
+</ul>
+</li>
+<li><p>what is GCCcore ?</p>
+<ul class="simple">
+<li><p>it is one of the “toolchains”. in other words it is a set of compilers that were used to build the software and dependencies. in this case it is the GNU C compiler. not sure what “core” is but it is probably a minimal version of the compiler suite.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">core</span></code> concept is from easybuild to serve as base for different toolchain.</p>
+<ul>
+<li><p>thanks for clarification!</p></li>
+</ul>
+</li>
+<li><p>You can find more info about toolchain on easybuild documentation <a class="reference external" href="https://docs.easybuild.io/common-toolchains/">here</a></p></li>
+</ul>
+</li>
+<li><p>Is it better to use Conda for installing software or a Container?</p>
+<ul class="simple">
+<li><p>both have advantages and disadvantages. I would start with Conda and only later consider a container. containerizing might be more work. but the advantage will be that it will be easier to move from one computer to another. but conda alone is probably simpler and it is good enough for most applications.</p></li>
+<li><p>advanced answer: personally I use both using https://github.com/bast/singularity-conda (but I wrote it)</p></li>
+<li><p>using a container can be a workaround around the problem of too many files or too long installation process</p></li>
+<li><p>documentation on how to use Conda on HPC: https://documentation.sigma2.no/software/userinstallsw/conda.html</p></li>
+</ul>
+</li>
+<li><p>Is there a way to search for specific information about the software you have installed?
+-<code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">avail</span></code> will list all the software installed on the cluster
+-but information about what the software does? l</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">show</span> <span class="pre">software</span></code>, for eg : <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">show</span> <span class="pre">R/4.2.1-foss-2022a</span></code> will print alot of info about R and the version on screen - and also info about what the module do in terms of loading paths etc.</p></li>
+<li><p>try <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">help</span></code>, for instance <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">help</span> <span class="pre">Python/3.11.3-GCCcore-12.3.0</span></code></p></li>
+</ul>
+</li>
+<li><p>How can a JS client interact with a Python program running on Saga? More concretely, I assume that a web API first authenticates incoming requests from the client and then takes some actions on the cluster, such as running the Python scripts or submitting a Slurm job. But I would greatly appreciate it if you could tell me a few things regarding such a specific way of real-time interaction with the HPC cluster, particularly about the authentication. I think this is an essential use case concerning the “Accessing the Software” part of the tutorial. Thank you!</p>
+<ul class="simple">
+<li><p>This is not the way a HPC cluster is normally used. HPC systems are best when you can breakdown your analysis to smaller components and anaysise the components in the same time (parallel)</p></li>
+<li><p>From your question it seems that you have an idea what you want as a function, but your technical requirement may have to be discussed further. For example JS clinets run on the browser and they do not directly communicte with back-end (e.g with server)</p></li>
+<li><p>Regarding authentication. Setting up your own web application to authenticate against SAGA is not recommended. What could be an alternative is to use continuous integration(CI/CD) pipleines. But for this even you need to define your front end better.</p></li>
+<li><p>Can you please give an example on what your intentions are .</p>
+<ul>
+<li><p>Thank you for the response. A good example is a user study scenario where the user interact with the browser app. The app sends the input arrays to the Python program on the cluster, where (1) the data is stored and labelled, and (2) a trained model generates a novel output based on the user’s input, which is fetched back by the client program and shown to the user.</p>
+<ul>
+<li><p>For this I do not think SAGA is the best place to host this. But we have other resources like the service platform.Please send us a mail and we can have discussion about this to how we can help you. May be we can have some pipline, e.g a Git ci/Cd where jobs are triggered on a HPC system.</p></li>
+<li><p>As shown yesterday, the interaction with the cluster is not immediate, e.g you ask the schedular (SLURM) to exceute the jobs when resources are availble.So a user interface directly communicating might have to wait for some time, that can not be predefined (e.g. it depends on current load at the moment the job was sumbmitted).</p>
+<ul>
+<li><p>Yes, that was precisely what I have been concerning about. Thank you for the explanation! I will surely contact you and we can discuss more specifically so I will not spam here more:) Again, thanks a lot!</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="exercise">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Exercise</a><a class="headerlink" href="#exercise" title="Link to this heading"></a></h2>
+<p>https://training.pages.sigma2.no/tutorials/hpc-intro/episodes/14-modules.html#id1</p>
+<section id="status">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">Status:</a><a class="headerlink" href="#status" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>I am done: ooooo0oo</p></li>
+<li><p>I need more time:</p></li>
+<li><p>Not trying:</p></li>
+</ul>
+</section>
+</section>
+<section id="compute-and-storage-quota">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Compute and storage quota</a><a class="headerlink" href="#compute-and-storage-quota" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>https://training.pages.sigma2.no/tutorials/hpc-intro/episodes/compute-storage-quota.html</p></li>
+</ul>
+<ol class="arabic simple" start="14">
+<li><p>What does it mean to change the group using the command: chgrp?</p>
+<ul class="simple">
+<li><p>on linux/unix system each file or folder has two ownership aspects. it belongs to a user and a group. it is possible to modify the ownership with chown or chgrp. did this clarify? (maybe I am answering out of context; I was in a different meeting)</p></li>
+<li><p>Thank youf for the answer. The context is <code class="docutils literal notranslate"><span class="pre">dusage</span></code> and moving to the work directory, I am used to chmod and understand what it does, but not chgrp. Maybe you cloud provide a bit more clarification.</p>
+<ul>
+<li><p>with <code class="docutils literal notranslate"><span class="pre">chown</span></code> you can change ownership. <code class="docutils literal notranslate"><span class="pre">chgrp</span></code> you can change ownership of the group part (ownership always has a user part and a group part)</p>
+<ul>
+<li><p>What if you do not have the permission to do that? I meant chmod not chown? (Difference between chmod and chgrp)?</p>
+<ul>
+<li><p>You can change permission for files you own or part of the group (and the group permissions allow this)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>One example for groups is projects. Where a set of group members can share a folder</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>What are the different groups? How do we know which one to change to?</p>
+<ul class="simple">
+<li><p>try typing <code class="docutils literal notranslate"><span class="pre">groups</span></code> - this will list you all the groups that you are part of</p></li>
+<li><p>but what is fex the difference between username and username_g?</p>
+<ul>
+<li><p>this is a very good question and I think the answer is that this is a technical choice made by the administrators to enable storage quota in the network file system. I don’t know otherwise why we needed two different groups: <code class="docutils literal notranslate"><span class="pre">user</span></code> and <code class="docutils literal notranslate"><span class="pre">user_g</span></code>. It confuses me as well and I write this as staff.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Is the directory /cluster/work/users/myuser empty automatically every once in a while? I think they mentioned something related to that. So I should move my stuff to the project directory if I want to keep the data?</p>
+<ul class="simple">
+<li><p>yes, files and folders older than typically 21 days will get automatically deleted: “The $USERWORK autocleanup period is at least 21 days and up to 42 days if sufficient storage is available”. so this is a good place to run calculations and to generate temporary data that you don’t need to keep but all data that you want to keep for later you should move away to the project folder</p>
+<ul>
+<li><p>Thanks! I will go right away through all of my stuff given I have never transferred anything yet. I have been using it for one month so I might be at risk =)</p></li>
+</ul>
+</li>
+<li><p>I will mention this in the next session.</p>
+<ul>
+<li><p>we will try to communicate this better in future to avoid surprises. on the positive side: it can be a nice place also for experimentation where you don’t need to clean up because the system eventually will.</p>
+<ul>
+<li><p>Good point!</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>So related to question 16, now my work directory is 364 GB big. Is it safe to transfer all to the project directory in one shot (say, with rsync)? Then I will clean up from the project directory</p>
+<ul class="simple">
+<li><p>first step: check with <code class="docutils literal notranslate"><span class="pre">dusage</span></code> that you have enough quota for it in the project directory</p></li>
+<li><p>then you can use rsync to transfer everything in one shot. even if the transfer gets interrupted, you can resume.</p></li>
+<li><p>if you are sure that your connection does not get interrupted, you could also <code class="docutils literal notranslate"><span class="pre">mv</span></code> the folders but here I would perhaps do it in chunks and not in one shot. <code class="docutils literal notranslate"><span class="pre">rsync</span></code> is safer w.r.t. connection loss.</p>
+<ul>
+<li><p>Understood! Thanks!</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>can you please show the project are to explain a use of groups</p>
+<ul class="simple">
+<li><p>What is the use of group ownership. So we can share files with others</p></li>
+<li><p>A group ownership is where you can share folders and files, for eg<code class="docutils literal notranslate"><span class="pre">nn9970k</span></code> project can have files with <code class="docutils literal notranslate"><span class="pre">nn9970k</span></code> ownership under the project area.</p></li>
+<li><p>you can use groups to assign access to files</p></li>
+<li><p>each user may belong to one primary group (<code class="docutils literal notranslate"><span class="pre">username_g</span></code>) and the project group here <code class="docutils literal notranslate"><span class="pre">nn9970k</span></code>, you can try <code class="docutils literal notranslate"><span class="pre">groups</span></code> and find the groups you are in</p></li>
+<li><p>Does it explains ?</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="poll-try-dusage">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Poll: Try <code class="docutils literal notranslate"><span class="pre">dusage</span></code></a><a class="headerlink" href="#poll-try-dusage" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Yes: oooooooo</p></li>
+<li><p>No:</p></li>
+</ul>
+</section>
+<section id="poll-try-cost">
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Poll: Try <code class="docutils literal notranslate"><span class="pre">cost</span></code></a><a class="headerlink" href="#poll-try-cost" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Yes:oooo</p></li>
+<li><p>No:</p></li>
+</ul>
+</section>
+<section id="using-shared-resources-responsibly">
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Using shared resources responsibly</a><a class="headerlink" href="#using-shared-resources-responsibly" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>https://training.pages.sigma2.no/tutorials/hpc-intro/episodes/18-responsibility.html</p></li>
+<li><p>Links Espen mentioned:
+<a class="reference external" href="https://documentation.sigma2.no/jobs/choosing-memory-settings.html#choosing-memory-setting">Choosing correct amount of memory</a>
+<a class="reference external" href="https://documentation.sigma2.no/jobs/choosing-number-of-cores.html#choosing-number-of-cores">Choosing correct number of cores</a></p></li>
+</ul>
+<p><a class="reference external" href="https://open.pages.sigma2.no/job-script-generator/">Tool for creating job scripts</a></p>
+<ol class="arabic simple" start="19">
+<li><p>Thank you Espen for a great analogy of a hotel. How do you explain interactive jobs in that case ?</p>
+<ul class="simple">
+<li><p>what was the hotel analogy? (I wasn’t here and missed it)</p>
+<ul>
+<li><p>the relationship between a supercomputer and a laptop is like the relationship between a hotel and a house.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Referring to last lesson what does Quota (nonpri) mean?</p>
+<ul class="simple">
+<li><p>You get nonpri if you have applied for quotas after the deadline</p></li>
+</ul>
+</li>
+<li><p>What are the numbers you us with chmod? Before we used fex +x</p>
+<ul class="simple">
+<li><p>You can find a details <a class="reference external" href="https://en.wikipedia.org/wiki/Chmod">here</a></p></li>
+</ul>
+</li>
+<li><p>So we should manually change permissions to our own files when we place them on the shared project directory in order to “protect them” from the other project members? I mean that no one could accidentally delete or modify our files.</p>
+<ul class="simple">
+<li><p>normally you don’t have to worry about that. you only need to worry about ownership and permissions when moving files from e.g. home to project folder since that does not modify ownership.</p></li>
+<li><p>but good point that if you want to protect files against accidental delete of other project members, you might need to adjust permissions.</p>
+<ul>
+<li><p>Thanks!  So the files I create in my working directory are created with permssions -rw-rw-r– . Given that I only have access to my working directory could I somehow set it to create the files with writing permissions only for me so that when I transfer them they keep that status?</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>How do I know what my job require to run?</p>
+<ul class="simple">
+<li><p>start with a small example, grow the example, and monitor how much time it takes and how much memory it consumes and adjust towards what you think is optimal</p>
+<ul>
+<li><p>thank you</p></li>
+</ul>
+</li>
+<li><p>Nice resources to read <a class="reference external" href="https://documentation.sigma2.no/jobs/choosing-memory-settings.html">here</a> and <a class="reference external" href="https://documentation.sigma2.no/jobs/choosing-number-of-cores.html">choosing number of cores</a></p></li>
+</ul>
+</li>
+<li><p>what does it mean if you submit a job successfully but cant find it in the squeue -u $USER?</p>
+<ul class="simple">
+<li><p>It means the job is no longer running (finished/cancelled/termonated) or not in the queue anymore.</p></li>
+<li><p>You can find info about the finished job by using <code class="docutils literal notranslate"><span class="pre">sacct</span> <span class="pre">-j</span> <span class="pre">jobid</span></code> or <code class="docutils literal notranslate"><span class="pre">scontrol</span> <span class="pre">show</span> <span class="pre">job</span> <span class="pre">jobid</span></code></p></li>
+<li><p>how do you find the <code class="docutils literal notranslate"><span class="pre">jobid</span></code>?</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">sacct</span> <span class="pre">-u</span> <span class="pre">username</span></code> this will give you a list of recent jobs(finished).</p></li>
+</ul>
+</li>
+<li><p>Sorry, the question might be out of scope, but is there an equivalent command for seff in TSD?</p>
+<ul class="simple">
+<li><p>I am sorry, I don’t know.  <code class="docutils literal notranslate"><span class="pre">sacct</span> <span class="pre">-j</span> <span class="pre">jobid</span></code> and <code class="docutils literal notranslate"><span class="pre">scontrol</span> <span class="pre">show</span> <span class="pre">job</span> <span class="pre">jobid</span></code> are general slurm commands that will give lot of information. <code class="docutils literal notranslate"><span class="pre">seff</span></code> is an independent perl script.</p>
+<ul>
+<li><p>Please try seff. The one person who developed seff has also been working on TSD, so it might work.</p>
+<ul>
+<li><p>Not well formulated request from my side I see… I tried seff in TSD before writing the question. I got the message ‘command not found’</p></li>
+<li><p>Ah, sorry - then it is not there.</p></li>
+<li><p>Thanks! Good idea. I will do.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>What is the best way to share log files ? send as attachment
+- You may send as attachment
+- Send us the full path (where they are) and infom us that it is OK for us to look at them</p></li>
+</ol>
+<section id="feedback-of-the-day">
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">Feedback of the day</a><a class="headerlink" href="#feedback-of-the-day" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>One good thing about today</p>
+<ul>
+<li><p>very nice support for the Q&amp;A, thank you for a nice course!</p></li>
+<li><p>It is one of the few workshops/courses where the time is correctly managed. I wanted to highlight this given all the people involved in the organization. You all had a great management of the time. Not easy to find in this environment!</p></li>
+<li><p>The shared document seemed to me a nice way to avoid oral interruptions which of course helps on the time management. It will also be super useful to access in the future together with the recordings of the sessions.</p></li>
+<li><p>Thank you! It was a very useful workshop for me! You cannot imagine how much!!!</p></li>
+</ul>
+</li>
+<li><p>One thing to improve</p>
+<ul>
+<li><p>would be nice to see an example on how you use software in the batch files</p></li>
+</ul>
+</li>
+</ul>
+<p>:::info
+Please always write new questions at the end of the document, above the line above. Don’t include any personal information, even name.  Be polite and use kind language. You are welcome to help out other users, if you could. This document is public !
+:::</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Sigma2/NRIS. Text shared under CC-BY 4.0 license.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+<!-- Integrate opslog banner -->
+<span class="sp-status"></span>
+<script>
+  window.statuspalWidget = {
+    subdomain: 'sigma2-nris',
+    host: 'https://statuspal.eu',
+    badge: {
+      enabled: false,
+      selector: '.sp-status', 
+    },
+    banner: {
+      enabled: true,
+      position: 'top-right',
+    }
+  }
+</script>
+<script src="https://statuspal.io/js/widget.js"></script>
+
+
+</body>
+</html>

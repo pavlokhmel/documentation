@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Questions and answers from HPC on-boarding Oct 2023, Day 0 (Oct 3) &mdash; Sigma2 documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/nris.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/nris.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://siteimproveanalytics.com/js/siteanalyze_6036825.js"></script>
+        <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Sigma2/NRIS documentation
+              <img src="../../../_static/NRIS Logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Policies</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../code-of-conduct.html">Code of Conduct</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting help</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/support_line.html">Getting help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/extended_support.html">Extended support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/faq.html">Frequently asked questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/how_to_write_good_support_requests.html">Writing good support requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/user_communities.html">User communities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/qa-sessions.html">Open Question &amp; Answer Sessions for All Users</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/lost_forgotten_password.html">Lost, expiring or changing passwords</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/project_leader_support.html">Project leader support</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Training</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../events.html">Training events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notes_qa.html">Questions, Answers and Feedbacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../videos.html">Training Video Archives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../material.html">Training materials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/opslog.html">Using the status system (opslog)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/applying_account.html">How do I get an account?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/applying_resources.html">Applying for computing and storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/editing_files.html">Editing files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_development/guides/vs_code/connect_to_server.html">Connecting to a system with Visual Studio Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/ssh.html">SSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/remote-desktop.html">Remote Desktop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/R.html">First R calculation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Services</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../nird_archive/user-guide.html">Research Data Archive (NIRD RDA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../nird_toolkit/overview.html">NIRD Toolkit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../services/easydmp-user-documentation.html">EasyDMP User Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/course_resources.html">CRaaS - Course Resources as a Service</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">HPC usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../hpc_machines/migration2metacenter.html">Migration to an NRIS HPC machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../computing/responsible-use.html">Using shared resources responsibly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../jobs/overview.html">Running jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../computing/tuning-applications.html">Tuning applications</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Code development and tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../code_development/overview.html">Code development and tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Software</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../software/modulescheme.html">Software module scheme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../software/installed_software.html">Installed software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../software/userinstallsw.html">Installing software as user</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../software/appguides.html">Application guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../software/licenses.html">Licence and access policies</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Files, storage and backup</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../files_storage/nird_lmd.html">NIRD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files_storage/clusters.html">Storage areas on HPC clusters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files_storage/quota.html">Storage quota</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files_storage/backup.html">Backup on Betzy, Fram, Saga, and NIRD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files_storage/file_transfer.html">File transfer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files_storage/sharing_files.html">Data handling and storage policy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files_storage/performance.html">Optimizing storage performance</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Sigma2/NRIS documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Questions and answers from HPC on-boarding Oct 2023, Day 0 (Oct 3)</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/UNINETTSigma2/documentation/blob/main/training/material/2023-autumn-onboarding/q_and_a_day0.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="questions-and-answers-from-hpc-on-boarding-oct-2023-day-0-oct-3">
+<span id="training-2023-autumn-onboarding-notes-day0"></span><h1><a class="toc-backref" href="#id5" role="doc-backlink">Questions and answers from HPC on-boarding Oct 2023, Day 0 (Oct 3)</a><a class="headerlink" href="#questions-and-answers-from-hpc-on-boarding-oct-2023-day-0-oct-3" title="Link to this heading"></a></h1>
+<nav class="contents" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#questions-and-answers-from-hpc-on-boarding-oct-2023-day-0-oct-3" id="id5">Questions and answers from HPC on-boarding Oct 2023, Day 0 (Oct 3)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#your-wishlist" id="id6">Your wishlist</a></p></li>
+<li><p><a class="reference internal" href="#icebreaker" id="id7">Icebreaker</a></p></li>
+<li><p><a class="reference internal" href="#polls-for-introductory-lesson-vote-by-placing-an-o" id="id8">Polls for introductory lesson (vote by placing an “o”)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#locating-the-terminal" id="id9">Locating the terminal</a></p></li>
+<li><p><a class="reference internal" href="#locating-ssh-type-ssh-v-on-your-terminal" id="id10">Locating ssh (type <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-V</span></code> on your terminal)</a></p></li>
+<li><p><a class="reference internal" href="#did-you-manage-to-login-in-to-saga" id="id11">Did you manage to login in to saga</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#the-terminal-and-remote-login" id="id12">The terminal and remote login</a></p></li>
+<li><p><a class="reference internal" href="#moving-around-and-looking-at-things" id="id13">Moving around and looking at things</a></p></li>
+<li><p><a class="reference internal" href="#exercise" id="id14">Exercise</a></p>
+<ul>
+<li><p><a class="reference internal" href="#status" id="id15">Status</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#finding-things" id="id16">Finding things</a></p></li>
+<li><p><a class="reference internal" href="#id1" id="id17">Exercise :</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id2" id="id18">Status:</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#how-to-create-and-modify-files" id="id19">How to create and modify files</a></p></li>
+<li><p><a class="reference internal" href="#how-to-compose-commands-with-pipes" id="id20">How to compose commands with pipes</a></p></li>
+<li><p><a class="reference internal" href="#scripting" id="id21">Scripting</a></p></li>
+<li><p><a class="reference internal" href="#id3" id="id22">Exercise</a></p></li>
+<li><p><a class="reference internal" href="#id4" id="id23">Status</a></p></li>
+<li><p><a class="reference internal" href="#feedback-of-the-day" id="id24">Feedback of the day</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="your-wishlist">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Your wishlist</a><a class="headerlink" href="#your-wishlist" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>I would like to understand better how to choose the appropriate parameters to run a job to allow a good gestion of the resources. So, fare I am using the same parameters for every job witch I guess is not the best.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#SBATCH --time=1-00:00:00</span>
+<span class="c1">#SBATCH --mem=100G</span>
+<span class="c1">#SBATCH --cpus-per-task=8&quot;</span>
+</pre></div>
+</div>
+<ul>
+<li><ul class="simple">
+<li><p>We will talk about the parameters. In detail, you can follow our documentation here.</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://documentation.sigma2.no/jobs/choosing-memory-settings.html#choosing-memory-settings">How to choose right amount of memory</a></p></li>
+<li><p><a class="reference external" href="https://documentation.sigma2.no/jobs/choosing-number-of-cores.html#choosing-number-of-cores">How to choose the number of cores</a></p></li>
+<li><p>Video recording on this can find <a class="reference external" href="https://www.youtube.com/watch?v=m7u52vIUwwc&amp;amp;list=PLoR6m-sar9AgoSnXdbUkO9FBiCUTft1GK&amp;amp;index=5">here</a></p></li>
+<li><p>Also note: The next level NRIS course typically go through this. We are having some restructuring of courses, but it used to be called HPC Best Practices.</p></li>
+</ol>
+</li>
+<li><p>I would be interested in running a program for which I have a licence on the cluster. It is called YASARA and is used for protein ligand docking and basic MD. Could you please let me know if this would be possible?</p>
+<ul class="simple">
+<li><p>If the licence allows it, this will be possible. For more assistance, please contact our support via support&#64;nris.no</p></li>
+</ul>
+</li>
+<li><p>Some introduction to running program like Star CCM+ or ANSYS or OpenFOAM etc</p>
+<ul class="simple">
+<li><p>We won’t be go into detail about this softwares, but you will get general overview of how to acces these software. Further, you can follow our <a class="reference external" href="https://documentation.sigma2.no/software/application_guides/openfoam.html#running-openfoam">documentation</a></p></li>
+</ul>
+</li>
+<li><p>I am looking for help regarding use of HPC resources of TSD and sigma2 for using deep learning application with GPU.</p>
+<ul class="simple">
+<li><p>Kindly follow the <a class="reference external" href="https://documentation.sigma2.no/code_development/guides/tensorflow_gpu.html#index-0">GPU documentation</a></p></li>
+</ul>
+</li>
+<li><p>I will be using WRF in Linux for my master thesis but using the Myrrha HPC. I just want to be very comfortable and confident with using Linux. Also, it will be very useful for my career pursuits.</p>
+<ul class="simple">
+<li><p>You are welcome!</p></li>
+</ul>
+</li>
+<li><p>I specific wish is to learn linux command line and to find and use different softwares in Saga to perform gene sequencing analysis.</p>
+<ul class="simple">
+<li><p>You are welcome!</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="icebreaker">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Icebreaker</a><a class="headerlink" href="#icebreaker" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>How do you ask a computer to do something for you?</p>
+<ul>
+<li><p>I use the mouse to point and click to open the programs I want to use</p></li>
+<li><p>With scripts and programs because they will remember even when I forget later</p></li>
+<li><p>guiding with the mouse, clicking to open any programs or files</p></li>
+<li><p>Tell the computer what to do through the terminal</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="polls-for-introductory-lesson-vote-by-placing-an-o">
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Polls for introductory lesson (vote by placing an “o”)</a><a class="headerlink" href="#polls-for-introductory-lesson-vote-by-placing-an-o" title="Link to this heading"></a></h2>
+<section id="locating-the-terminal">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Locating the terminal</a><a class="headerlink" href="#locating-the-terminal" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>I found my terminal : ooooooooooooo</p></li>
+<li><p>I can not find my terminal :</p></li>
+<li><p>I am lost, what is a terminal? :</p></li>
+</ul>
+</section>
+<section id="locating-ssh-type-ssh-v-on-your-terminal">
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">Locating ssh (type <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-V</span></code> on your terminal)</a><a class="headerlink" href="#locating-ssh-type-ssh-v-on-your-terminal" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>I have ssh : oooooooooooooooooo0oo0ooo0</p></li>
+<li><p>I do not have ssh :</p></li>
+<li><p>I am lost, what do you mean by ssh :</p></li>
+<li><p>I know what SSH is but I am not sure what you mean by “locating ssh” : oo</p></li>
+<li><p>All clarified now? o</p></li>
+</ul>
+</section>
+<section id="did-you-manage-to-login-in-to-saga">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Did you manage to login in to saga</a><a class="headerlink" href="#did-you-manage-to-login-in-to-saga" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>yes:oooooooooøooooooooo</p></li>
+<li><p>no :</p></li>
+<li><p>no and I need help :</p></li>
+<li><p>no I don’t have an account on saga:</p></li>
+</ul>
+</section>
+</section>
+<section id="the-terminal-and-remote-login">
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">The terminal and remote login</a><a class="headerlink" href="#the-terminal-and-remote-login" title="Link to this heading"></a></h2>
+<p>https://training.pages.sigma2.no/tutorials/unix-for-hpc/episodes/intro.html</p>
+<ol class="arabic simple">
+<li><p>I could not get terminal using ctrl+Alt+T windows</p>
+<ul class="simple">
+<li><p>which system are you on? Windows/Linux/Mac?</p></li>
+<li><p>Did you find it in another way? In the program search?</p>
+<ul>
+<li><p>Yes using the search - good</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Other than a basic Terminal, which other tools/software (free) would you recommend (I heard about MobaXterm, Termius, etc. but have not tried them)?</p>
+<ul class="simple">
+<li><p>for windows users who might be completely new to terminal, I would recommend having a look at MobaXterm or VS Code  with remote SSH plugin</p>
+<ul>
+<li><p>https://documentation.sigma2.no/code_development/guides/vs_code/connect_to_server.html</p></li>
+</ul>
+</li>
+<li><p>terminus looks interesting. I did not know about it.</p></li>
+<li><p>for mac, I would suggest ‘iTerm’</p></li>
+<li><p>for windows, the Windows Terminal (https://github.com/microsoft/terminal) is also ok</p></li>
+</ul>
+</li>
+<li><p>How do you access saga?</p>
+<ul class="simple">
+<li><p>If you have a user account, you can use the command on your terminal <code class="docutils literal notranslate"> <span class="pre">ssh</span> <span class="pre">yourusername&#64;saga.sigma2.no</span></code> . For the first time, you will be prompted to affirm the fingerprint. You can check it <a class="reference external" href="https://documentation.sigma2.no/getting_started/ssh.html#first-time-login">here</a> and then you will prompted to your password. The instructors will show you this soon.</p></li>
+</ul>
+</li>
+<li><p>Where to find the fingerprints?</p>
+<ul class="simple">
+<li><p>https://documentation.sigma2.no/getting_started/ssh.html#first-time-login</p></li>
+<li><p><a class="reference external" href="https://documentation.sigma2.no/getting_started/fingerprints.html">Fingerprint of our systems</a></p></li>
+</ul>
+</li>
+<li><p>I’m getting permision denied; I don’t know why?</p>
+<ul class="simple">
+<li><p>Are you a new user? Can you contact the host(dhanya) on zoom with username?</p></li>
+<li><p>Dhanya is checking</p></li>
+<li><p>Resolved</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="moving-around-and-looking-at-things">
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">Moving around and looking at things</a><a class="headerlink" href="#moving-around-and-looking-at-things" title="Link to this heading"></a></h2>
+<p>https://training.pages.sigma2.no/tutorials/unix-for-hpc/episodes/moving-around.html</p>
+<ol class="arabic simple" start="6">
+<li><p>Should we all type with you or only watch?</p>
+<ul class="simple">
+<li><p>only watch for the moment</p></li>
+<li><p>but if you prefer to type-along, you can</p></li>
+<li><p>there will be exercise sessions where we can try it</p></li>
+</ul>
+</li>
+<li><p>Do we have any cheatsheet with all commands that we use?</p>
+<ul class="simple">
+<li><p>https://training.pages.sigma2.no/tutorials/unix-for-hpc/cheat-sheet.html</p></li>
+</ul>
+</li>
+<li><p>Does the fingerprint have to be identical to the fingerprint in the link? Mine starts with SHA256: but the rest is not the same as in the link.</p>
+<ul class="simple">
+<li><p>It should be.</p></li>
+</ul>
+</li>
+</ol>
+<ul class="simple">
+<li><p>How do i fix it?</p>
+<ul>
+<li><p>mReport back to support&#64;nris.no. Do you have ed25519 fingerprint also?
+For this case, it is most likely fine.
+mine is: SHA256:qirKlTjO9QSXuCAiuDQeDPqq+jorMFarCW+0qhpaAEA. They are identical, see https://documentation.sigma2.no/getting_started/fingerprints.html#ssh-fingerprints. No worries!!</p></li>
+</ul>
+</li>
+</ul>
+<ol class="arabic simple" start="9">
+<li><p>my temporary password will expire today, passwd command to change password is throwing error. Help needed</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">passwd</span> 
+<span class="n">Changing</span> <span class="n">password</span> <span class="k">for</span> <span class="n">user</span> <span class="n">myusername</span><span class="o">.</span>
+<span class="n">Current</span> <span class="n">Password</span><span class="p">:</span> 
+<span class="n">New</span> <span class="n">password</span><span class="p">:</span> 
+<span class="n">Retype</span> <span class="n">new</span> <span class="n">pange</span> <span class="n">failed</span><span class="o">.</span> <span class="n">Server</span> <span class="n">message</span><span class="p">:</span> <span class="n">Insufficient</span> <span class="n">access</span> <span class="n">rights</span>
+
+<span class="n">passwd</span><span class="p">:</span> <span class="n">Authentication</span> <span class="n">token</span> <span class="n">manipulation</span> <span class="n">error</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Try this: https://www.metacenter.no/user/reset/
+Thank you!</p>
+<ul>
+<li><p>Is it resolved? – yes, I got another temporary password which will expire on 10.10.</p></li>
+<li><p>You can change it  https://www.metacenter.no/user/reset/.</p></li>
+<li><p>Contact the host on zoom private chat, if you still have trouble.</p></li>
+<li><p>Now I am able to change my own password. I can access the server with my new changed password.</p></li>
+<li><p>Great. Thank you for responding :thumbsup:</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="exercise">
+<h2><a class="toc-backref" href="#id14" role="doc-backlink">Exercise</a><a class="headerlink" href="#exercise" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>https://training.pages.sigma2.no/tutorials/unix-for-hpc/episodes/moving-around.html#exercise</p></li>
+</ul>
+<section id="status">
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">Status</a><a class="headerlink" href="#status" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>I am done: ooooo</p></li>
+<li><p>I need more time:</p></li>
+<li><p>Not trying this one: o</p></li>
+</ul>
+<ol class="arabic simple" start="10">
+<li><p>I cannot find any .output files in any subfoldeer?</p>
+<ul class="simple">
+<li><p>~~Indeed. I am not sure the exerice and the solution matches demo-moving-around. We will ask instructors to double-check.~~</p>
+<ul>
+<li><p>Observation is correct. The files download are different for exercises</p>
+<ul>
+<li><p>aha I extracted the wrong thing. the example on top of the page is different than the exercise tarball. <code class="docutils literal notranslate"><span class="pre">demo-moving-around</span></code> is different than <code class="docutils literal notranslate"><span class="pre">exercise-moving-around</span></code>.</p></li>
+<li><p>aaaaah, I made the same mistake, thank you!</p>
+<ul>
+<li><p>Yes, we will fix this confusion in the future</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>you will find the .output files if you list the content <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">~/exercise-moving-around/results</span></code></p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<section id="finding-things">
+<h2><a class="toc-backref" href="#id16" role="doc-backlink">Finding things</a><a class="headerlink" href="#finding-things" title="Link to this heading"></a></h2>
+<p>https://training.pages.sigma2.no/tutorials/unix-for-hpc/episodes/finding-things.html</p>
+<ol class="arabic simple" start="11">
+<li><p>Didn’t quite catch what is safer about <code class="docutils literal notranslate"><span class="pre">*.csv</span></code> vs *.csv, and what safe means.</p>
+<ul class="simple">
+<li><p>good question. Let’s see if we can come up with an example that demonstrates the difference.</p></li>
+<li><p>Example:</p>
+<ul>
+<li><p>go into a directory which contains a couple of .csv files, for instance <code class="docutils literal notranslate"><span class="pre">a.csv</span></code> and <code class="docutils literal notranslate"><span class="pre">b.csv</span></code></p></li>
+<li><p>try: <code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">-name</span> <span class="pre">*.csv</span></code> - this will fail because the terminal “expands” this to <code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">-name</span> <span class="pre">a.csv</span> <span class="pre">b.csv</span></code> before the <code class="docutils literal notranslate"><span class="pre">find</span></code> command is run and in this case find does not know what we mean.</p></li>
+<li><p>then try: <code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">-name</span> <span class="pre">&quot;*.csv&quot;</span></code> - this works. here the terminal does not expand the wildcard but it is <code class="docutils literal notranslate"><span class="pre">find</span></code> which deals with it.</p></li>
+</ul>
+</li>
+<li><p>did this clarify the difference?</p></li>
+<li><p>“safer”: it does what you expect instead of being unsure what might happen or doing something unexpected or giving an error</p></li>
+</ul>
+</li>
+<li><p>What does <code class="docutils literal notranslate"><span class="pre">grep</span></code> stands for?</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">grep</span></code> stands  for Global Regular Expression Print :+1:</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="id1">
+<h2><a class="toc-backref" href="#id17" role="doc-backlink">Exercise :</a><a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>https://training.pages.sigma2.no/tutorials/unix-for-hpc/episodes/finding-things.html#exercise)</p>
+<section id="id2">
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">Status:</a><a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>I am done: oooooooo</p></li>
+<li><p>I need more time:</p></li>
+</ul>
+<ol class="arabic simple" start="13">
+<li><p>After restarting my computer i get Command ‘ssh’ not found</p>
+<ul class="simple">
+<li><p>What OS (Operating System)?</p></li>
+<li><p>If it is windows, Open your settings. Go to Apps &gt; Apps and Features &gt; Manage Optional Features. Check the list to see if “OpenSSH Client” is enabled. If not enable it.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<section id="how-to-create-and-modify-files">
+<h2><a class="toc-backref" href="#id19" role="doc-backlink">How to create and modify files</a><a class="headerlink" href="#how-to-create-and-modify-files" title="Link to this heading"></a></h2>
+<p>https://training.pages.sigma2.no/tutorials/unix-for-hpc/episodes/writing-files.html</p>
+</section>
+<section id="how-to-compose-commands-with-pipes">
+<h2><a class="toc-backref" href="#id20" role="doc-backlink">How to compose commands with pipes</a><a class="headerlink" href="#how-to-compose-commands-with-pipes" title="Link to this heading"></a></h2>
+<p>https://training.pages.sigma2.no/tutorials/unix-for-hpc/episodes/pipes.html</p>
+<ol class="arabic simple" start="14">
+<li><p>how do i input a pipe in windows?
+- if a Norwegian keyboard, press the key to the left of number 1
+- yes i got it</p></li>
+<li><p>How so you make the pipe sign on mac?</p></li>
+</ol>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- On mac you can type a pipe symbol by typing (english keyboard) `shift + \`
+-  For me it is option+7 (Norwegian keyboard)
+</pre></div>
+</div>
+<ol class="arabic simple" start="16">
+<li><p>Should all commands be on the same line when using pipe ?</p>
+<ul class="simple">
+<li><p>Yes, if you press enter the that would mean executing it - in a script you can break the line by using a line-break character though <code class="docutils literal notranslate"><span class="pre">\</span></code> but sometimes it does not work completely as expected (sensitive to spaces etc), so you can experiment with that</p></li>
+</ul>
+</li>
+<li><p>Will the histrory be there when I login next time ?</p>
+<ul class="simple">
+<li><p>yes. it is preserved across log-out/log-in. however, it has a max length which can be re-configured. I think my history is configured to keep the last 1000 commands I typed.</p></li>
+</ul>
+</li>
+<li><p>How do I use pipes with my own commands, instead of UNIX commands? can I use python scripts ?</p>
+<ul class="simple">
+<li><p>yes, for example: <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">myexample.py</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">&quot;something&quot;</span> <span class="pre">|</span> <span class="pre">sort</span></code></p></li>
+</ul>
+</li>
+<li><p>When you used the magic xargs, how do I prevent overiting when I want to direct the final output to a file ? e.g. collect last 10 lines matching something to one file</p>
+<ul class="simple">
+<li><p>You could use the double angle brackets <code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span></code> if you want to write to the same file. When we use that all new information will be appended at the end of the file</p></li>
+<li><p>If you used a single angle bracket <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> then the new informaiton will ovewrite the existing content. So if you do this only the last thing you wrote will remain in the file, everything elese would have dissapared, Please note UNIX operations like piping contents to a file has no <code class="docutils literal notranslate"><span class="pre">undo</span></code></p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="scripting">
+<h2><a class="toc-backref" href="#id21" role="doc-backlink">Scripting</a><a class="headerlink" href="#scripting" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>https://training.pages.sigma2.no/tutorials/unix-for-hpc/episodes/pipes.html</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2><a class="toc-backref" href="#id22" role="doc-backlink">Exercise</a><a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>https://training.pages.sigma2.no/tutorials/unix-for-hpc/episodes/scripting.html#exercise</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2><a class="toc-backref" href="#id23" role="doc-backlink">Status</a><a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>I am done: ooooo</p></li>
+<li><p>I need more time and I will do  later today:</p></li>
+</ul>
+<ol class="arabic simple" start="20">
+<li><p>I am not able make the new script</p>
+<ul class="simple">
+<li><p>You can try <code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">filename.sh</span></code> to edit your file, then add the commands,  here you can follow the solution .</p></li>
+<li><p>Thanks, i managed it with your suggestion</p></li>
+<li><p>You are welcome!</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="feedback-of-the-day">
+<h2><a class="toc-backref" href="#id24" role="doc-backlink">Feedback of the day</a><a class="headerlink" href="#feedback-of-the-day" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>One good thing about today</p>
+<ul>
+<li><p>very organized and easy to follow</p></li>
+<li><p>Very nice online course because I could learn several commands that I did not know. Thank you very much!</p></li>
+<li><p>Technical setup is great! Excellent tutorials make it easy to follow the tutorials and refer back when unsure.</p></li>
+<li><p>the exercises are great and I like the tutorials</p></li>
+<li><p>I thought the tempo and level were great. Not too fast or slow.</p></li>
+<li><p>Thank you for the cool new things to learn (but I don’t know how would it be for totally new linux users :) )</p></li>
+<li><p>very informative! thank you &lt;3</p></li>
+<li><p>Very useful intro for new unix users. I think it will be very useful for tomorrow and Thursday! Thanks!</p></li>
+</ul>
+</li>
+<li><p>One thing we should improve</p>
+<ul>
+<li><p>for me as a beginner it was sometimes a bit too fast</p></li>
+<li><p>would be nice to spend a bit more time on each topic</p></li>
+<li><p>Documentations (i.e.,online text) are still being updated, so it would be nice if you could indicate the version in the text.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Sigma2/NRIS. Text shared under CC-BY 4.0 license.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+<!-- Integrate opslog banner -->
+<span class="sp-status"></span>
+<script>
+  window.statuspalWidget = {
+    subdomain: 'sigma2-nris',
+    host: 'https://statuspal.eu',
+    badge: {
+      enabled: false,
+      selector: '.sp-status', 
+    },
+    banner: {
+      enabled: true,
+      position: 'top-right',
+    }
+  }
+</script>
+<script src="https://statuspal.io/js/widget.js"></script>
+
+
+</body>
+</html>
